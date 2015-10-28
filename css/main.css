@@ -146,6 +146,10 @@ ul {
 --------------------------------3 Navigation Menues
 */
 
+#navigation {
+	visibility: hidden;
+}
+
 ul li{
 	display: inline-block;
 }
@@ -200,7 +204,7 @@ footer [class="col-1-4"]:first-of-type {
 }
 
 footer section:nth-child(2) {
-	margin-left: 15%;
+	margin-left: 7%;
 }
 
 /*
@@ -258,6 +262,9 @@ header img {
 --------------------------------------4.3 Site Footer
 */
 
+footer section[class="col-1-3"] {
+	margin-left: 15%;
+}
 
 /*
 --------------------------------5 Media
@@ -269,12 +276,13 @@ header img {
 --------------------------------------5.1 Sprites
 */
 
-a[class*="sprite"] {
+
+a[class*="sprite"], a[id*="sprite"] {
 	margin: 0;
 	border: 0px;
 }
 
-a[class*="sprite"]:hover {
+a[class*="sprite"]:hover, a[id*="sprite"]:hover {
 	border: 0px;
 }
 
@@ -304,6 +312,60 @@ a[class*="sprite"]:hover {
     transition: background 1s steps(91);
 }
 
+
+
+
+#prints-sprite  {
+	height: 125px;
+	width: 125px;
+	background: url(../img/print-sprite.png);
+	background-position: 1px 0;
+	margin: 0 auto;
+}
+
+#prints-sprite:hover {
+    background-position: 1px -625px;
+    transition: background 1s steps(91);
+}
+
+#interactive-sprite  {
+	height: 125px;
+	width: 125px;
+	background: url(../img/interactive-sprite.png);
+	background-position: 1px 0;
+	margin: 0 auto;
+}
+
+#interactive-sprite:hover {
+    background-position: 1px -1000px;
+    transition: background 2.5s steps(1000);
+}
+
+#application-sprite  {
+	height: 125px;
+	width: 125px;
+	background: url(../img/application-sprite.png);
+	background-position: 1px 0;
+	margin: 0 auto;
+}
+
+#application-sprite:hover {
+    background-position: 1px -2250px;
+    transition: background 1s steps(18);
+}
+
+#branding-sprite {
+	width: 125px;
+	height: 125px;
+	background: url(../img/branding-sprite.png) no-repeat;
+}
+
+#branding-sprite:hover {
+    background-position: 1px -900px ;
+    transition: background 2s steps(3000);
+}
+
+
 /*
 --------------------------------------5.2 Background Images
 */
@@ -328,7 +390,11 @@ a[class*="sprite"]:hover {
 
 @media screen and (max-width: 480px) {
 	
-	.col-1-3, .wrapper, .col-1-2 {
+	/*
+	--------------------------------------- Column Adjustments
+	*/
+	
+	section .col-1-3, footer .col-1-3, .wrapper, .col-1-2 {
 		width: 95%;
 		padding: 2%;
 		float: none;
@@ -341,9 +407,22 @@ a[class*="sprite"]:hover {
 		float: none;
 	}
 	
+	/*
+	--------------------------------------- Margin Adjustments
+	*/
+	
 	section[id="work"] {
 		margin: 0 auto;
 	}
+	
+	footer section {
+		margin: 0 auto;
+		float: none;
+	}
+	
+	/*
+	--------------------------------------- Typography Adjustments
+	*/
 	
 	h1 {
 		font-size: 4rem;
@@ -357,10 +436,6 @@ a[class*="sprite"]:hover {
 		display: none;
 	}
 	
-	footer section {
-		margin: 0 auto;
-		float: none;
-	}
 	
 	body>section:first-of-type p, footer section[class="col-1-3"] {
 		padding: 0 1rem;
@@ -376,6 +451,227 @@ a[class*="sprite"]:hover {
 		text-align: center;
 	}
 	
+	/*
+	--------------------------------------- Sprites
+	*/
+	
+	.sprite-fb {
+		height: 20px;
+		background: url(../img/facebook-sprite.png) no-repeat;
+		background-position: left;
+	}
+	
+	.sprite-fb:hover {
+		background-position: left;
+		transition: none;
+	}
+	
+	.sprite-fb:active {
+		background-position: -1740px 0;
+	}
+	
+	.sprite-tumblr {
+		height: 20px;
+		background: url(../img/tumblr-sprite.png) no-repeat;
+		background-position: left;
+	}
+	
+	.sprite-tumblr:hover {
+		background-position: left;
+		transition: none;
+	}
+	
+	.sprite-tumblr:active {
+		background-position: -1720px 0;
+	}
+	
+	#prints-sprite  {
+		height: 125px;
+		width: 125px;
+		background: url(../img/print-sprite.png);
+		margin: 0 auto;
+	}
+	
+	#prints-sprite:hover {
+		background-position: top;
+		transition: none;
+	}
+	
+	#prints-sprite:active {
+		background-position: bottom;
+	}
+	
+	#interactive-sprite  {
+		height: 125px;
+		width: 125px;
+		background: url(../img/interactive-sprite.png);
+		margin: 0 auto;
+	}
+	
+	#interactive-sprite:hover {
+		background-position: top;
+		transition: none;
+	}
+	
+	#interactive-sprite:active {
+		background-position: bottom;
+	}
+	
+	#application-sprite  {
+		height: 125px;
+		width: 125px;
+		background: url(../img/application-sprite.png);
+		margin: 0 auto;
+	}
+	
+	#application-sprite:hover {
+		background-position: top;
+		transition: none;
+	}
+	
+	#application-sprite:active {
+		background-position: bottom;
+	}
+	
+	#branding-sprite {
+		width: 125px;
+		height: 125px;
+		background: url(../img/branding-sprite.png) no-repeat;
+	}
+	
+	#branding-sprite:hover {
+		background-position: top;
+		transition: none;
+	}
+	
+	#branding-sprite:active {
+		background-position: bottom;
+	}
+	
+	/*
+	--------------------------------------- Nav
+	*/
+	
+	footer ul {
+		float: none;
+		text-align: center;
+	}
+
+	#navigation a, footer a {
+		color: #C9C9C9;
+		font-size: .8rem;
+		padding: .3rem .7rem;
+		border-bottom: 1px solid #C9C9C9;
+		margin: .3rem;
+	}
+	
+	#navigation a {
+		display: block;
+	}
+	
+	#navigation nav a:active, footer a:active {
+		border: 1px solid #C9C9C9;	
+	}
+		
+	#navbar {
+		visibility: visible;
+		margin-right: 20%;
+	}
+	
+	
+	/* almost there! burger burger burger */
+	
+	#navigation {
+		visibility: hidden;
+	}
+	
+	#navigation {
+	  width: 50%;
+	  height: 50%;
+	  position: fixed;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  z-index: 0;
+	  text-align: left;
+	}
+	
+	#navigation li {
+		display: block;
+	}
+	
+	#navigation a {
+		border: 1px solid #C9C9C9;
+		padding: 1rem 0;
+	}
+
+	.site-wrap {
+	  min-height: 100%;
+	  min-width: 100%;
+	  background-color: #000;
+	  position: relative;
+	  top: 0;
+	  z-index: 1;
+	}
+
+	#nav-trigger {
+	  position: absolute;
+	}
+
+	[for="nav-trigger"] {
+	  	position: fixed;
+		z-index: 2;
+		background-image: url(../img/burger.png);
+	    background-size: contain;
+	}
+
+	/* Make the Magic Happen */
+	#nav-trigger + label, .site-wrap {
+	    transition: left 0.2s;
+	}
+	
+	#nav-trigger:checked + label {
+	  left: 200px;
+	}
+	
+	#nav-trigger:checked ~ .site-wrap {
+	  left: 200px;
+	}
+
+	body {
+	  overflow-x: hidden;
+	}
+	
+	/*
+	--------------------------------------- Buttons
+	*/
+	
+	body>section a {
+		font-size: 1rem;
+		border-bottom: 1px solid #C9C9C9;
+		padding: .35rem 1.25rem;
+		margin: 10% 20%;
+	}
+	
+	body>section a:hover {
+		border: 1px solid #C9C9C9;
+	}
+	
+	body>section a:active {
+		border: 1px solid #C9C9C9;
+	}
+	
+	/*
+	--------------------------------6 Other
+	*/
+	
+	header img {
+		margin: 10% auto;
+		display: block;
+		float: none;
+		text-align: center;
+	}
 }
 
 /*
